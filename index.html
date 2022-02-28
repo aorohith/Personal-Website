@@ -88,7 +88,7 @@
             <h3>Full Stack Flutter Developer.</h3>
             <p class="fst-italic">
               "A programming language is for thinking about programs, not for expressing programs you've already thought
-              of. It should be a pencil, not a pen.""
+              of. It should be a pencil, not a pen."
             </p>
             <div class="row">
               <div class="col-lg-6">
@@ -569,10 +569,8 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
-  <!-- <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script> -->
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
 
+  <!-- Script for form validation  -->
   <script>
     const scriptURL = 'https://script.google.com/macros/s/AKfycby5cq0E9ww1SXSn4qBjfk__CcvtNzYhteVIlILOc6iR_0xEFqdN8QJUEYRKhPdNYuziEA/exec'
     const form = document.forms['contact-form']
@@ -580,15 +578,17 @@
       e.preventDefault()
       fetch(scriptURL, { method: 'POST', body: new FormData(form) })
         .then(response => {
-          alert("Form submitted successfully")
+          alert("Thank you for getting in touch!")
+          window.location.reload()
           window.location.href="https://aorohith.github.io/Personal-Website/"
         })
         .catch(error => {
-          alert("Error")
+          alert("Try again after some time")
           window.location.href="https://aorohith.github.io/Personal-Website/"
         })
     })
   </script>
+
 </body>
 
 </html>
